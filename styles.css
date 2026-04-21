@@ -213,6 +213,9 @@ section#our-pluses div#cards{
 }
 
 section#our-pluses div.card{
+  font-family: "Onest", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
   background-color: rgba(99, 63, 154, 0.2);
   border: 1px solid #633F9A;
   border-top-left-radius: 29px;
@@ -225,4 +228,90 @@ section#our-pluses div.card{
 
 section#our-pluses div.card p{
   margin-top: 17px ;
+}
+
+section#our-users h1{
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700; 
+  font-size: 64px;
+  text-align: center;
+  margin-top: 98px;
+}
+
+section#our-users div#users{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 27px 180px;
+  max-width: 1247px;
+  margin-top: 58px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section#our-users div.user{
+  font-family: "Onest", sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section#our-users div.user#CAT p{
+  padding: 112px 54px 36px 54px;
+  align-self: stretch;
+}
+
+section#our-users div.user p{
+  text-align: center;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding: 80px 55px 36px 54px;
+  margin-bottom: 0;
+}
+
+section#our-users div.user img {
+  margin-bottom: -90px;
+  position: relative;
+  z-index: 1;
+}
+
+section#form {
+  display: flex;
+  gap: 40px;
+  margin-top: 100px;
+  align-items: center;
+}
+
+section#form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+section#form form .consent-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+section#form form input[type="checkbox"] {
+  cursor: pointer;
+}
+
+section#form form label {
+  cursor: pointer;
+}
+
+section#form form input[type="text"],
+section#form form input[type="email"],
+section#form form input[type="tel"],
+section#form form input[type="checkbox"],
+section#form form label {
+  background: transparent;
+  font-family: 'Onest', sans-serif;
+  color: white;
+  border: none;
+  border-bottom: 1px solid white;
 }
