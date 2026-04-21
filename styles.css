@@ -1,0 +1,228 @@
+body {
+  margin-top: 26px;
+  margin-left: 54px;
+  margin-right: 54px;
+  color:white;
+  display: flex;
+  flex-direction: column;
+  background-image: url(assets/bkg.svg);
+
+}
+
+
+section#introduction div.header{
+  font-family: 'Unbounded', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+section#introduction h1.email {
+  align-self: flex-end;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing:-0.46px;
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 10px 24px;
+  border-radius: 19.5px;
+}
+
+section#introduction div#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+section#introduction div#main h1{
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700;
+  font-size: 44px;
+  text-align: center;
+  line-height: 120%;
+  max-width: 1376px;
+}
+
+section#introduction div#main p{
+  padding: 0 113px;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 37px;
+  max-width: 1150px;
+}
+
+button.about{
+  background: linear-gradient(to left, #A068EB 0%, #563BA2 43%, #A068EB 82%, #563BA2 100%);
+  color: white;
+  border: none;
+  padding: 20px 27px;
+  margin-right: 30px;
+  border-radius: 46px;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button.special-offer{
+  background: white;
+  color: #262626;
+  border: none;
+  padding: 20px 27px;
+  border-radius: 46px;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+section#comparison{
+  margin-top: 104px;
+  border: 3px solid #A068EB;
+  border-radius: 20px;
+  padding: 33px 57px;
+  max-width: 1281px;
+  align-self: center;
+}
+
+section#comparison div{
+  display: flex;
+}
+
+section#comparison div.minuses{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+}
+
+section#comparison div.pluses{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 600;
+  font-size: 45px;
+  margin-left: 80px;
+}
+
+section#comparison ul.minuses{
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+section#comparison ul.pluses{
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Onest', sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+li {
+  display: flex;
+ list-style-type: none;
+ list-style-position: outside;
+ padding-left: 0;
+ padding-bottom: 30px;
+}
+ul.pluses li:before {
+ content: url(assets/plus.svg);
+}
+
+ul.minuses li:before {
+ content: url(assets/minus.svg);
+}
+
+section#how-it-works{
+  margin-top: 97px;;
+  align-self: center;
+}
+
+section#how-it-works h1{
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700; 
+  font-size: 64px;
+  text-align: center;
+
+}
+
+section#how-it-works .steps{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 37px 49px;
+  max-width: 1247px;
+}
+
+@media (max-width: 1300px) {
+  section#how-it-works .steps{
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+}
+
+section#how-it-works .step-img{
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 53px 22px 60px 35px;
+}
+
+section#how-it-works .step{
+  display: flex;
+  flex-direction: column;
+}
+
+section#how-it-works p{
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700; 
+  font-size: 128px;
+  margin: 0;
+}
+section#our-pluses{
+  margin-top: 118px;
+  
+}
+
+section#our-pluses h1{
+  font-family: 'Unbounded', sans-serif;
+  font-weight: 700; 
+  font-size: 64px;
+  text-align: center;
+}
+
+section#our-pluses div#cards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 39px 42px;
+  max-width: 1247px;
+  margin-top: 83px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section#our-pluses div.card{
+  background-color: rgba(99, 63, 154, 0.2);
+  border: 1px solid #633F9A;
+  border-top-left-radius: 29px;
+  border-bottom-right-radius: 29px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 26px;
+  max-width: 354px;
+}
+
+section#our-pluses div.card p{
+  margin-top: 17px ;
+}
