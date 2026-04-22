@@ -27,8 +27,8 @@
       <img src="assets/notebook.svg" alt="Notebook">
       <p> Контролируйте параметры печати в реальном времени, получайте уведомления об отклонениях и сокращайте брак — без постоянного присутствия оператора</p>
       <div class="buttons">
-        <button class="about">Узнать подробнее</button>
-        <button class="special-offer">Получить специальное предложение</button>
+        <button class="about" onclick="window.location.href = `#comparison`">Узнать подробнее</button>
+        <button class="special-offer" onclick="window.location.href = `#form`">Получить специальное предложение</button>
       </div>
     </div>
   </section>
@@ -126,19 +126,30 @@
   </section>
 
   <section id="form">
-    <form>
-      <input type="text" placeholder="Ваше ФИО">
-      <input type="text" placeholder="Ваша компания">
-      <input type="email" placeholder="Ваш e-mail">
-      <input type="tel" placeholder="Ваш телефон">
+    <form action="https://formsubmit.co/email@gmail.com" method="POST">
+      <input type="text" name="ФИО" placeholder="Ваше ФИО" required>
+      <input type="text" name="Компания" placeholder="Ваша компания" required>
+      <input type="email" name="Email" placeholder="Ваш e-mail" required>
+      <input type="tel" name="Телефон" placeholder="Ваш телефон" required>
       <div class="consent-wrapper">
-        <input type="checkbox" id="consent" name="consent">
+        <input type="checkbox" id="consent" name="consent" required>
         <label for="consent">Согласен/на на <a  style="color: white;" href="privacy-policy.html" target="_blank">обработку персональных данных</a></label>
       </div>
-      <button class="submit">Отправить заявку</button>
+      <button type="submit" class="submit">Получать новости о проекте</button>
       <p>*Мы не рассылаем спам. Только важные обновления о запуске и приглашения на закрытые демо</p>
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="http://127.0.0.1:5500/main.html">
     </form>
-    <img src="assets/form_image.svg" alt="Form image">
+    <img src="assets/form_img.png" alt="Form image">
   </section>
 </body>
+<footer>
+  <img src="assets/logo.svg" alt="Logo">
+  <div id="contacts">
+    <p>whale@yandex.ru</p>
+    <img src="assets/tg_logo.svg" alt="Telegramm">
+  </div>
+  <a  style="color: white;" href="privacy-policy.html" target="_blank">*Политика конфиденциальности</a>
+  <p>Сайт носит исключительно информационный характер и не является публичной офертой. Любое копирование материалов сайта полностью или частично без предварительного разрешения правообладателей запрещено.</p>
+</footer>
 </html>
