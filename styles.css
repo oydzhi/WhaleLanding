@@ -748,6 +748,10 @@ footer p {
     font-size: 8px;
   }
 
+  footer div#contacts img{
+    content: url(assets/tg_logo_small.svg);
+  }
+
   footer a {
     margin-top: 20px;
     grid-column: 1;
