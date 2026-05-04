@@ -21,13 +21,18 @@
   <section id="introduction">
     <div class="header">
       <img src="assets/full_logo.svg" alt="Whale">
-      <h1 class="email">whale@yandex.ru</h1>
+      <h1 class="email">whale-coms@yandex.ru</h1>
     </div>
     <div id="main">
       <h1>Первое в России ПО для автоматизированного мониторинга 3D&#8209;печати</h1>
+      <div class="exclusive">
+        <img src="assets/star_small.svg">
+        <p>Эксклюзивный анонс на выставке “Металлообработка 2026”</p>
+      </div>
       <img src="assets/notebook.svg" alt="Notebook">
       <div class="buttons">
-        <p> Контролируйте параметры печати в реальном времени, получайте уведомления об отклонениях и сокращайте брак — без постоянного присутствия оператора</p>
+        <p class="desktop-text"> Контролируйте параметры печати в реальном времени, получайте уведомления об отклонениях и сокращайте брак — без постоянного присутствия оператора</p>
+        <p class="mobile-text">Контролируйте параметры печати в реальном времени, получайте уведомления об отклонениях без постоянного присутствия оператора</p>
         <button class="special-offer" onclick="window.location.href = `#form`">Узнать подробнее</button>
       </div>
     </div>
@@ -126,14 +131,18 @@
   </section>
 
   <section id="form">
-    <form action="https://formsubmit.co/email@gmail.com" method="POST">
+    <form action="send_mail.php" method="POST">
       <input type="text" name="ФИО" placeholder="Ваше ФИО" required>
       <input type="text" name="Компания" placeholder="Ваша компания" required>
       <input type="email" name="Email" placeholder="Ваш e-mail" required>
       <input type="tel" name="Телефон" placeholder="Ваш телефон" required>
       <div class="consent-wrapper">
         <input type="checkbox" id="consent" name="consent" required>
-        <label for="consent">Согласен/на на <a  style="color: white;" href="privacy-policy.html" target="_blank">обработку персональных данных</a></label>
+        <label for="consent">Я ознакомился с <a  style="color: white;" href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a> и даю <a  style="color: white;" href="privacy-policy.html" target="_blank">согласие</a> на обработку персональных данных</label>
+      </div>
+      <div class="consent-wrapper">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">Я соглашаюсь на получение рекламных рассылок и персональных предложений</label>
       </div>
       <button type="submit" class="submit">Получать новости о проекте</button>
       <p>*Мы не рассылаем спам. Только важные обновления о запуске и приглашения на закрытые демо</p>
@@ -146,10 +155,23 @@
 <footer>
   <img src="assets/logo.svg" alt="Logo">
   <div id="contacts">
-    <p>whale@yandex.ru</p>
+    <p>whale-coms@yandex.ru</p>
     <img src="assets/tg_logo.svg" alt="Telegramm">
   </div>
   <a  style="color: white;" href="privacy-policy.html" target="_blank">*Политика конфиденциальности</a>
   <p>Сайт носит исключительно информационный характер и не является публичной офертой. Любое копирование материалов сайта полностью или частично без предварительного разрешения правообладателей запрещено.</p>
 </footer>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=109029605', 'ym');
+
+    ym(109029605, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/109029605" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </html>
