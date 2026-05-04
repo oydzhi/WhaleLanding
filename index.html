@@ -133,21 +133,19 @@
   <section id="form">
     <form action="send_mail.php" method="POST">
       <input type="text" name="ФИО" placeholder="Ваше ФИО" required>
-      <input type="text" name="Компания" placeholder="Ваша компания" required>
+      <input type="text" name="Компания" placeholder="Ваша должность" required>
       <input type="email" name="Email" placeholder="Ваш e-mail" required>
       <input type="tel" name="Телефон" placeholder="Ваш телефон" required>
       <div class="consent-wrapper">
-        <input type="checkbox" id="consent" name="consent" required>
-        <label for="consent">Я ознакомился с <a  style="color: white;" href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a> и даю <a  style="color: white;" href="privacy-policy.html" target="_blank">согласие</a> на обработку персональных данных</label>
+        <input type="checkbox" id="consent1" name="consent" required>
+        <label for="consent1">Я ознакомился с <a  style="color: white;" href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a> и даю <a  style="color: white;" href="privacy-policy.html" target="_blank">согласие</a> на обработку персональных данных</label>
       </div>
       <div class="consent-wrapper">
-        <input type="checkbox" id="consent" name="consent" required>
-        <label for="consent">Я соглашаюсь на получение рекламных рассылок и персональных предложений</label>
+        <input type="checkbox" id="consent2" name="consent" required>
+        <label for="consent2">Я соглашаюсь на получение рекламных рассылок и персональных предложений</label>
       </div>
       <button type="submit" class="submit">Получать новости о проекте</button>
       <p>*Мы не рассылаем спам. Только важные обновления о запуске и приглашения на закрытые демо</p>
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="http://127.0.0.1:5500/main.html">
     </form>
     <img src="assets/form_img.png" alt="Form image">
   </section>

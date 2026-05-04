@@ -339,7 +339,7 @@ section#form form {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 60px 0 0 32px;
+  padding: 60px 0 10px 32px;
   margin-right: 56px;
   max-width: 832px;
 }
@@ -351,6 +351,7 @@ section#form form .consent-wrapper {
 }
 
 section#form form input[type="checkbox"] {
+  flex-shrink: 0;
   cursor: pointer;
   accent-color: var(--primary-color);
   width: 19px;

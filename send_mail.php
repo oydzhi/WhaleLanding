@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["Email"];
     $phone = $_POST["Телефон"];
 
-    $to = "bachurinvv54@gmail.com";
+    $to = "whale-coms@yandex.ru";
     $subject = "Новая заявка с сайта";
 
     $message = "
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     mail($to, $subject, $message, $headers);
 
-    header("Location: thank-you.html");
+    header("Location: index.html");
     echo "Форма отправлена";
     print_r($_POST);
     exit();
