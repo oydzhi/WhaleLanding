@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #A068EB;
+  --primary-dark: #563BA2;
+  --secondary-dark: #262626;
+  --card-bg: rgba(99, 63, 154, 0.2);
+  --card-border: #633F9A;
+  --form-bg: #383838;
+  --font-unbounded: 'Unbounded', sans-serif;
+  --font-onest: 'Onest', sans-serif;
+  --white: white;
+  --black: black;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20%;
+}
+
+body {
+  margin: 26px 54px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  background: url(assets/bkg.svg) center / cover no-repeat;
+}
+
+h1 {
+  font-family: var(--font-unbounded);
+  font-weight: 700;
+  font-size: 44px;
+  text-align: center;
+  line-height: 120%;
+  max-width: 1376px;
+}
+
+p, li{
+  font-family: var(--font-onest);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+ol>li{
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+}
