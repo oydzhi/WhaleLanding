@@ -64,19 +64,19 @@
     <div class="steps">
       <div class="step"> 
         <p>1</p>
-        <img src="assets/step1.svg" alt="Step 1" class="step-img">
+        <img src="assets/step1.svg" alt="Step 1" class="step-img" id="step1">
       </div>
       <div class="step"> 
         <p>2</p>
-        <img src="assets/step2.svg" alt="Step 2" class="step-img">
+        <img src="assets/step2.svg" alt="Step 2" class="step-img" id="step2">
       </div>
       <div class="step"> 
         <p>3</p>
-        <img src="assets/step3.svg" alt="Step 3" class="step-img">
+        <img src="assets/step3.svg" alt="Step 3" class="step-img" id="step3">
       </div>
       <div class="step"> 
         <p>4</p>
-        <img src="assets/step4.svg" alt="Step 4" class="step-img">
+        <img src="assets/step4.svg" alt="Step 4" class="step-img" id="step4">
       </div>
     </div>
   </section>
@@ -155,6 +155,15 @@
       <p>Спасибо за обращение, с Вами свяжутся в ближайшее время</p>
       <button onclick="closePopup()">Вернуться на сайт</button>
     </div>
+  </div>
+  <div id="cookie-popup" class="cookie-popup hidden">
+  <div class="cookie-content">
+    <div>
+      <h2>Cookies файлы</h2>
+      <p>Мы используем файлы cookies для улучшения работы сайта</p>
+    </div>
+    <button id="accept-cookies">Принять</button>
+  </div>
 </div>
 </body>
 <footer>
@@ -240,5 +249,17 @@
   if (params.get('success') === '1') {
     document.getElementById('popup').classList.remove('hidden');
   }
+</script>
+<script>
+  const cookiePopup = document.getElementById('cookie-popup');
+  const acceptBtn = document.getElementById('accept-cookies');
+  if (!localStorage.getItem('cookiesAccepted')) {
+    cookiePopup.classList.remove('hidden');
+  }
+
+  acceptBtn.addEventListener('click', function () {
+    localStorage.setItem('cookiesAccepted', 'true');
+    cookiePopup.classList.add('hidden');
+  });
 </script>
 </html>
