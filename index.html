@@ -131,25 +131,31 @@
       </div>
     </div>
   </section>
-
   <section id="form">
     <form action="send_mail.php" method="POST">
-      <input type="text" name="ФИО" placeholder="Ваше ФИО" required>
-      <input type="text" name="Компания" placeholder="Ваша должность" required>
-      <input type="email" name="Email" placeholder="Ваш e-mail" required>
-      <input type="tel" name="Телефон" placeholder="Ваш телефон" required>
+      <input type="text" name="name" placeholder="Ваше ФИО" required>
+      <input type="text" name="position" placeholder="Ваша должность" required>
+      <input type="email" name="email" placeholder="Ваш e-mail" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" required>
+      <input type="tel" name="phone" placeholder="Ваш телефон" required>
       <div class="consent-wrapper">
         <input type="checkbox" id="consent1" name="consent" required>
-        <label for="consent1">Я ознакомился с <a  style="color: white;" href="privacy-policy.html">Политикой конфиденциальности</a> и даю <a  style="color: white;" href="agreement.html">согласие</a> на обработку персональных данных</label>
+        <label for="consent1">Я ознакомился с <a  style="color: white;" href="/privacy">Политикой конфиденциальности</a> и даю <a  style="color: white;" href="/agreement">согласие</a> на обработку персональных данных</label>
       </div>
       <div class="consent-wrapper">
-        <input type="checkbox" id="consent2" name="consent" required>
+        <input type="checkbox" id="consent2" name="consent">
         <label for="consent2">Я соглашаюсь на получение рекламных рассылок и персональных предложений</label>
       </div>
       <button type="submit" class="submit">Получать новости о проекте</button>
     </form>
     <img src="assets/form_img.png" alt="Form image">
   </section>
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <h2>Форма отправлена</h2>
+      <p>Спасибо за обращение, с Вами свяжутся в ближайшее время</p>
+      <button onclick="closePopup()">Вернуться на сайт</button>
+    </div>
+</div>
 </body>
 <footer>
   <img src="assets/logo.svg" alt="Logo">
@@ -157,7 +163,7 @@
     <p>whale-coms@yandex.ru</p>
     <img src="assets/tg_logo.svg" alt="Telegramm">
   </div>
-  <a  style="color: white;" href="privacy-policy.html">*Политика конфиденциальности</a>
+  <a  style="color: white;" href="/privacy">*Политика конфиденциальности</a>
   <p>Сайт носит исключительно информационный характер и не является публичной офертой. Любое копирование материалов сайта полностью или частично без предварительного разрешения правообладателей запрещено.</p>
 </footer>
 <!-- Yandex.Metrika counter -->
@@ -173,4 +179,66 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/109029605" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+ <script>
+  const phoneInput = document.querySelector('input[name="phone"]');
+
+  phoneInput.addEventListener('input', onPhoneInput);
+  phoneInput.addEventListener('keydown', onPhoneKeyDown);
+
+  function getDigits(value) {
+    return value.replace(/\D/g, '');
+  }
+
+  function formatPhone(digits) {
+    let result = '+7';
+
+    if (digits.length > 1) result += ' (' + digits.slice(1, 4);
+    if (digits.length >= 4) result += ') ' + digits.slice(4, 7);
+    if (digits.length >= 7) result += '-' + digits.slice(7, 9);
+    if (digits.length >= 9) result += '-' + digits.slice(9, 11);
+
+    return result;
+  }
+
+  function onPhoneInput(e) {
+    let digits = getDigits(phoneInput.value);
+
+    if (!digits.startsWith('7')) {
+      digits = '7' + digits;
+    }
+
+    digits = digits.slice(0, 11);
+
+    const formatted = formatPhone(digits);
+    phoneInput.value = formatted;
+  }
+
+  function onPhoneKeyDown(e) {
+    // даём нормально работать Backspace
+    if (e.key === 'Backspace') {
+      let digits = getDigits(phoneInput.value);
+
+      if (digits.length <= 1) {
+        phoneInput.value = '';
+        return;
+      }
+
+      digits = digits.slice(0, -1);
+      phoneInput.value = formatPhone(digits);
+
+      e.preventDefault(); // предотвращаем стандартное удаление
+    }
+  }
+</script>
+<script>
+  function closePopup() {
+    document.getElementById('popup').classList.add('hidden');
+  }
+
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get('success') === '1') {
+    document.getElementById('popup').classList.remove('hidden');
+  }
+</script>
 </html>
