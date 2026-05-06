@@ -52,18 +52,23 @@ section#introduction div#main {
   margin-top: 100px;
 }
 
-section#introduction div#main div.exclusive{
+section#introduction div#main div.exclusive {
   position: absolute;
+  top: 415px;
+  right: 66px;
+
   display: flex;
   font-family: var(--font-onest);
   font-weight: 300;
   font-size: 20px;
+
   border: 1px solid var(--card-border);
   background-color: #633F9A74;
   border-radius: 29px 6px 29px 6px;
+
   padding: 9px 22px;
-  margin-top: -320px;
-  margin-right: -880px;
+
+  margin: 0; /* ВАЖНО убрать */
   max-width: 425px;
 }
 
@@ -84,6 +89,7 @@ section#introduction div#main h1 {
   text-align: center;
   line-height: 120%;
   max-width: 1376px;
+  margin-bottom: 48px;
 }
 
 
@@ -537,6 +543,11 @@ footer p {
     font-size: 36px;
   }
 
+    section#introduction div#main div.exclusive{
+      top: 360px;
+      right: 22px;
+  }
+
   section#comparison {
     padding: 25px 30px;
   }
@@ -621,8 +632,8 @@ footer p {
     background-color: #633F9A74;
     border-radius: 20px 4px;
     padding: 6px;
-    margin-top: -290px;
-    margin-right: -180px;
+    top: 220px;
+    right: 22px;
     max-width: 215px;
   }
 
@@ -641,7 +652,6 @@ footer p {
   section#introduction div#main img {
     max-width: 100%;
     width: 100%;
-    margin-top: 46px;
     height: auto;
   }
 
