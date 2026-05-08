@@ -457,7 +457,7 @@ footer div#contacts p {
   margin: 0 0 10px;
 }
 
-footer a {
+footer a#privacy {
   font-family: var(--font-onest);
   font-weight: 300;
   font-size: 12px;
@@ -947,7 +947,7 @@ footer p {
     content: url(assets/tg_logo_small.svg);
   }
 
-  footer a {
+  footer a#privacy {
     margin-top: 20px;
     grid-column: 1;
     font-size: 6px;
